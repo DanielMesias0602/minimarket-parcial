@@ -1,0 +1,3 @@
+| Fase | Qué generó la IA | Qué corregí o rechacé | Por qué |
+| :--- | :--- | :--- | :--- |
+| Fase 1: D0.md | El borrador del documento base (problema, usuarios, 4 RF, 2 RNF, 5 RN, fuera de alcance y supuesto). | Corregí el RF01 agregando la palabra "categoría" y "precio de venta". | Kiro omitió la categoría en el primer requisito funcional, y la profesora la pide explícitamente en el caso original. Revisé el resto del documento y lo acepté porque estaba correcto. |
