@@ -36,4 +36,27 @@ Prompt enviado a Kiro:
 3. Porfa mueve los dos archivos .md a la raíz del proyecto (al lado de D0.md) y borra la carpeta `.kiro`. Gracias."
 
 ================================================================
+Fase 3 - Base de datos
 
+Oye Kiro, para la Fase 3 ya creé la carpeta database y los archivos vacíos schema.sql y seed.sql en VS Code. Por favor, NO ejecutes nada en la terminal ni en la base de datos, porque mi profesora exige que yo lo importe manualmente en phpMyAdmin.
+
+Solo necesito que escribas el código dentro de los archivos:
+
+En database/schema.sql: escribe el código SQL para crear la base de datos bodega_ventas (en utf8mb4) y las tablas producto y venta (con sus llaves primarias, la foránea, el UNIQUE para el código y los CHECK para precio >= 0, stock >= 0 y cantidad > 0).
+
+En database/seed.sql: escribe los INSERT INTO para meter los 8 productos de prueba (del P001 al P008) exactos del caso.
+
+P001, Arroz superior 5 kg, Abarrotes, 22.50, 20, 5
+P002, Azúcar rubia 1 kg, Abarrotes, 4.20, 30, 10
+P003, Aceite vegetal 1 L, Abarrotes, 9.90, 12, 4
+P004, Leche evaporada 400 g, Lácteos, 4.00, 48, 12
+P005, Fideo spaghetti 500 g, Abarrotes, 3.50, 25, 8
+P006, Atún en trozos 170 g, Conservas, 6.50, 3, 6
+P007, Gaseosa 1.5 L, Bebidas, 7.00, 18, 6
+P008, Detergente 1 kg, Limpieza, 11.80, 2, 4
+
+En la raíz del proyecto, crea o escribe dentro del archivo .env las variables: DB_HOST=localhost, DB_NAME=bodega_ventas, DB_USER=root y DB_PASS= (vacío).
+
+En la raíz, escribe dentro del archivo .gitignore la palabra .env para que no se suban las credenciales a GitHub.
+
+Por favor, redacta el código directamente en los archivos y avísame cuando estén listos.
