@@ -103,12 +103,31 @@ Reglas para todo el código:
 
 Después de explicar cada archivo, espera a que yo escriba «continúa». 
 
+Antes de escribir código, explícame en pocas líneas por qué se prueba el Service y no la vista,
+y qué es un repositorio falso en memoria.
+Luego genera tests/run.php ejecutable con "php tests/run.php", sin PHPUnit ni Composer, que
+pruebe los Services con repositorios falsos en memoria (sin base de datos). Casos mínimos:
+1) venta válida: calcula el total y descuenta el stock;
+2) cantidad 0 o negativa: se rechaza;
+3) cantidad mayor al stock: se rechaza y el stock no cambia;
+4) producto inexistente: se rechaza;
+5) producto con precio negativo: se rechaza;
+6) listado de stock bajo: devuelve solo productos en o por debajo de su mínimo.
+Al final, explícame cómo leer la salida.
+
+=============================================
+FASE 5: Seguridad y cierre 
 Prompt P4 · Auditoría:
 Audita todo el código contra OWASP Top 10: inyección SQL, XSS, CSRF, credenciales expuestas,
 manejo de errores e integridad de datos (transacción de venta). Por cada hallazgo indica:
 archivo, línea, riesgo, un ejemplo concreto de cómo se explotaría y la corrección.
 Explica cada corrección y aplícala solo cuando yo escriba «aplica».
 Prompt P5 · Deuda técnica y documentación:
+Escribe TECH_DEBT.md con al menos tres atajos tomados hoy (qué, por qué, impacto, cuándo
+pagarlo). Escribe README.md con: requisitos, cómo crear la base con database/schema.sql y
+seed.sql, cómo configurar .env, cómo ejecutar la aplicación y las pruebas.
+Verifica que .env esté en .gitignore y que .env.example exista. Propón el mensaje de commit.
+
 Escribe TECH_DEBT.md con al menos tres atajos tomados hoy (qué, por qué, impacto, cuándo
 pagarlo). Escribe README.md con: requisitos, cómo crear la base con database/schema.sql y
 seed.sql, cómo configurar .env, cómo ejecutar la aplicación y las pruebas.
